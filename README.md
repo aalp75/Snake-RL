@@ -12,11 +12,11 @@ Implementation of Reinforcement learning algorithm with Q-learning and Deep Q-le
 
 **1. Execution**
 
-To execute the RL algorithm type in console: *python agent.py*
+To execute the RL algorithm type in console: *--python agent.py*
 
-You can change few parameters, either you train the model by modifying the variable *MODE="train"* or either you play with already trained model *MODE="play" *.
+You can change few parameters, either you train the model by modifying the variable *MODE="train"* or either you play with already trained model *MODE="play"*.
 
-2 models are available: Q-learning and Deep Q-learning, you can between the both by changing the variable * *MODEL* *.
+2 models are available: Q-learning and Deep Q-learning, you can between the both by changing the variable *MODEL*.
 
 **2. Presentation**
 
@@ -38,9 +38,9 @@ We use * *Tensorflow* * to implement the neural network. We use replay experienc
 
 - Qlearn.py: the Q-learn model.
 
-- NN: the Deep Q-learning model implemented with * *Tensorflow* *.
+- NN: the Deep Q-learning model implemented with *Tensorflow*.
 
-- game.py: the snake game using * *pygame* *.
+- game.py: the snake game using *pygame*.
 
 - save_parameters: folder containing models already trained.
 
