@@ -1,5 +1,7 @@
 # Snake-RL
 
+Implementation of Reinforcement learning algorithm with Q-learning and Deep Q-learning for the snake game.
+
 **Summary**
 
 1. Article
@@ -10,16 +12,24 @@
 
 **1. Execution**
 
-Implementation of Reinforcement learning algorithm with Q-learning and Deep Q-learning for the snake game.
+To execute the snake
+-- python agent.py --
+
+You can change few parameters, either you train the model by modifying the variable * *MODE="train"* * or either you play with already trained model * *MODE="play" * *.
+
+2 models are available: Q-learning and Deep Q-learning, you can between the both by changing the variable * *MODEL* *.
 
 **2. Presentation**
 
-List of coding files
+We use a vector of size 11 to representating the state, each value can take 0 or 1.
 
-- agent.py: The main files, representa
+[danger straight, danger right, danger left, direction left, direction right, direction up, direction down]
 
-- ArmaGarch.ipynb: Implementation of a class ARMA(pm,qm)-Garch(pv,qv) in the aim to estimate a model based on a data.
-(- ArmaGarch.py: To allowed "import" for other Notebook)
+**3.Files **
+
+- agent.py: The main files, representing the agent
+
+- Qlearn.py: the Q-learn model
 
 - Financial data.ipynb: Application of the theorical result on real financial datas. First on S&P daily returns then Euro Stoxx 50.
 
@@ -27,10 +37,11 @@ List of coding files
 
 - Multi-dimensional.ipynb: Second extension of the article
 
-
+**3. Result**
 **3. References**
 
 **4. Author**
+
 aalp75
 
 Last update 25/01/2022
