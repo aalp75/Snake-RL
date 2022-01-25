@@ -30,8 +30,8 @@ And the actions available are [straight, right, left] representing by for exampl
 
 Q-learning is representaing in a matrix of * *state x action* *matrix.
 
-Deep Q-learning is representating by approching the Q function by a neural network of *11x128x128x3*  with *relu* function on each layer and * *softmax* * for output.
-We use * *Tensorflow* * to implement the neural network. We use replay experience with last 10000 states in memory and a batch size of 32.
+Deep Q-learning is representating by approching the Q function by a neural network of *11x128x128x3*  with *relu* function on each layer and *softmax* for output.
+We use *Tensorflow* to implement the neural network. We use replay experience with last 10000 states in memory and a batch size of 32.
 
 
 **3.Files**
