@@ -12,10 +12,9 @@ Implementation of Reinforcement learning algorithm with Q-learning and Deep Q-le
 
 **1. Execution**
 
-To execute the snake
--- python agent.py --
+To execute the RL algorithm type in console: *python agent.py*
 
-You can change few parameters, either you train the model by modifying the variable * *MODE="train"* * or either you play with already trained model * *MODE="play" * *.
+You can change few parameters, either you train the model by modifying the variable *MODE="train"* or either you play with already trained model *MODE="play" *.
 
 2 models are available: Q-learning and Deep Q-learning, you can between the both by changing the variable * *MODEL* *.
 
@@ -29,7 +28,7 @@ And the action available are [straight, right, left] representing by for example
 
 Q-learning is representaing in a matrix of * *state x action* *matrix.
 
-Deep Q-learning is representating by approching the Q function by a neural network of * *11x128x128x3* * with * *relu* * function on each layer and * *softmax* * for output.
+Deep Q-learning is representating by approching the Q function by a neural network of *11x128x128x3*  with *relu* function on each layer and * *softmax* * for output.
 We use * *Tensorflow* * to implement the neural network. We use replay experience with last 10000 states in memory and a batch size of 32.
 
 
@@ -43,19 +42,21 @@ We use * *Tensorflow* * to implement the neural network. We use replay experienc
 
 - game.py: the snake game using * *pygame* *.
 
+- save_parameters: folder containing models already trained.
+
 **3. Result**
 
-We need around 500 games for achive good result.
+We need around 500 games for achieve good results.
 
-Q-learning: we achived a record of 98 and average score of 50.
+Q-learning: we achieved a record of 98 and average score of 50.
 
-Deep Q-learning: we achived a record of 75 and an average score of 32.
+Deep Q-learning: we achieved a record of 75 and an average score of 32.
 
 Q-learning perform better on this case due to the low number of states. If we pass in argument the whole picture in argument of our NN it will achieve better results.
 
 **3. References**
 
-I take the game on Geeksforgeeks : https://www.geeksforgeeks.org/ai-driven-snake-game-using-deep-q-learning/ and inspired myself about this article.
+I take the game on Geeksforgeeks and inspired myself about this article: https://www.geeksforgeeks.org/ai-driven-snake-game-using-deep-q-learning/.
 
 * *Playing Atari with Deep Reinforcement Learning* * Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, Martin Riedmiller, 2013
 
