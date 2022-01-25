@@ -16,7 +16,9 @@ To execute the RL algorithm type in console: *--python agent.py*
 
 You can change few parameters, either you train the model by modifying the variable *MODE="train"* or either you play with already trained model *MODE="play"*.
 
-2 models are available: Q-learning and Deep Q-learning, you can between the both by changing the variable *MODEL*.
+2 models are available: Q-learning and Deep Q-learning, you can change between the both by changing the variable *MODEL*.
+
+Variable *MODE* and *MODEL* are both in *agent.py*.
 
 **2. Presentation**
 
