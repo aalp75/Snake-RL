@@ -21,6 +21,8 @@ You can change few parameters, either you train the model by modifying the varia
 
 Variable *MODE* and *MODEL* are both in *agent.py*.
 
+You can change the speed of the snake by modifying the variable *SPEED* in *game.py*. Set it to 3000 for fast train or set it to 20 to observe.
+
 **2. Presentation**
 
 We use a vector of size 11 to representating the state, each value can take 0 or 1.
