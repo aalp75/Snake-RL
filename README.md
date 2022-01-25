@@ -4,11 +4,12 @@ Implementation of Reinforcement learning algorithm with Q-learning and Deep Q-le
 
 **Summary**
 
-1. Article
-2. Code and instructions
-3. Data
-4. References
-5. Author
+1. Execution
+2. Presentation
+3. Files
+4. Result
+5. References
+6. Author
 
 **1. Execution**
 
@@ -46,7 +47,7 @@ We use *Tensorflow* to implement the neural network. We use replay experience wi
 
 - save_parameters: folder containing models already trained.
 
-**3. Result**
+**4. Result**
 
 We need around 500 games for achieve good results.
 
@@ -56,13 +57,13 @@ Deep Q-learning: we achieved a record of 75 and an average score of 32.
 
 Q-learning perform better on this case due to the low number of states. If we pass in argument the whole picture in argument of our NN it will achieve better results.
 
-**3. References**
+**5. References**
 
 I take the game on Geeksforgeeks and inspired myself about this article: https://www.geeksforgeeks.org/ai-driven-snake-game-using-deep-q-learning/.
 
 *Playing Atari with Deep Reinforcement Learning* Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, Martin Riedmiller, 2013
 
-**4. Author**
+**6. Author**
 
 aalp75
 
