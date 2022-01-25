@@ -2,6 +2,7 @@ import tensorflow as tf
 
 class DQN:
     
+    #Define your NN
     def __init__(self, learning_rate=0.001):
         self.model = tf.keras.Sequential([
             tf.keras.layers.Dense( units = 128 , input_dim=11, activation ="relu"),
@@ -19,7 +20,7 @@ class DQN:
         
     def save(self):
         print("----Config saved----")
-        self.model.save_weights('save_parameters/my_checkpoint')
+        self.model.save_weights('save_parameters/my_checkpoint2')
         
     def load(self):
         print("----Config loaded----")

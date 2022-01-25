@@ -2,6 +2,10 @@ import numpy as np
 
 class Qlearn:
     
+    #The Q matrix of size 2x2x2x2x2 (11 times) is save in a 2048x3 matrix
+    #We use the function convert_state to map a vector [1,0,1,0,0,0,1,0,0,1,1,0] into a number between 0 and 2048
+    #It's a bijection since we use the base 2.
+    
     def __init__(self):
         self.Q = np.zeros((pow(2,11),3))
     
@@ -34,7 +38,7 @@ class Qlearn:
         ( reward + discount_factor * self.Q[next_state_idx,best_next_action_idx] - self.Q[state_idx,action_idx])
         
     def save(self):
-        with open('save_parameters/Qlearn_cfg.npy', 'wb') as file:
+        with open('save_parameters/Qlearn_cfg2.npy', 'wb') as file:
             print("----Config saved----")
             np.save(file,self.Q)
         

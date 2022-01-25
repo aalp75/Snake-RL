@@ -4,7 +4,6 @@ import time
 from game import SnakeGameAI, Direction, Point
 from Qlearn import Qlearn
 from NN import DQN
-from helper import plot
 
 
 class Agent:
@@ -100,7 +99,7 @@ class Agent:
             else:#!model = Qlearn
                 return self.model.predict(state)
                
-    def replay(self,batch_size = 32):
+    def replay(self,batch_size = 32):#Replay experience
         
         batch = np.random.choice(len(self.state_memory), batch_size, replace=False)
         
@@ -172,19 +171,18 @@ class Agent:
     
 def play(mode,model):
     
-    plot_scores = []
-    plot_mean_scores = []
+    #Expantional moving average
     mean_score = 0
-    total_score = 0
     alpha = 0.95
     
+    #Create the game and the agent
     agent = Agent(mode,model)
     game = SnakeGameAI()
     current_time = time.time()
 
     while True:
         state = agent.get_state(game)
-        if agent.model_type == "DQN":
+        if agent.model_type == "DQN":#Reshape in this case to be in good format for the tf NN
             state = np.reshape(state,(1,11))
         
         action = agent.get_move(state)
@@ -202,22 +200,19 @@ def play(mode,model):
         
         if done:
             agent.ite +=1
-            agent.epsilon = agent.epsilon * 0.9
+            agent.epsilon = agent.epsilon * 0.9#Diminue the epsilon exploration parameter
             
-            if (game.score > agent.record):
+            if (game.score > agent.record):#Best result
                 agent.record = game.score
                 agent.save()
             
-            #plot_scores.append(score)
-            #total_score += score
             mean_score = round(alpha * mean_score + (1 - alpha)*score,2)
-            #plot_mean_scores.append(mean_score)
-            #plot(plot_scores, plot_mean_scores)
-            
             timer = round(time.time() - current_time,2)
+            
             print("Game", agent.ite ,"Score", game.score , "Record", agent.record,"EMA", mean_score,\
             "Time", timer , 'seconds')
-            game.reset()
+                
+            game.reset()#Launch new game
 
 MODE = "train"
 #MODE= "play"  
