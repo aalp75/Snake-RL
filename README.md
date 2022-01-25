@@ -24,7 +24,7 @@ We use a vector of size 11 to representating the state, each value can take 0 or
 
 [danger straight, danger right, danger left, direction left, direction right, direction up, direction down, food left, food right, food up, food down].
 
-And the action available are [straight, right, left] representing by for example [1,0,0] = straight.
+And the actions available are [straight, right, left] representing by for example [1,0,0] = straight.
 
 Q-learning is representaing in a matrix of * *state x action* *matrix.
 
@@ -58,7 +58,7 @@ Q-learning perform better on this case due to the low number of states. If we pa
 
 I take the game on Geeksforgeeks and inspired myself about this article: https://www.geeksforgeeks.org/ai-driven-snake-game-using-deep-q-learning/.
 
-* *Playing Atari with Deep Reinforcement Learning* * Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, Martin Riedmiller, 2013
+*Playing Atari with Deep Reinforcement Learning* Volodymyr Mnih, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, Martin Riedmiller, 2013
 
 **4. Author**
 
